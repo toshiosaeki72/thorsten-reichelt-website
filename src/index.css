@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-white text-black;
+  }
+}
+
+@layer components {
+  .page-title {
+    @apply font-serif text-2xl font-light uppercase tracking-wide mb-8;
+  }
+  
+  .section-title {
+    @apply font-serif text-xl md:text-2xl font-light uppercase tracking-wide mb-4;
+  }
+  
+  .nav-link {
+    @apply font-serif text-base font-semibold uppercase tracking-wide transition-all duration-200;
+  }
+  
+  .breadcrumb-link {
+    @apply font-sans text-sm uppercase tracking-wide underline hover:no-underline transition-all duration-200;
+  }
+  
+  .category-link {
+    @apply font-serif text-lg font-medium uppercase tracking-wide underline hover:no-underline transition-all duration-200 mr-6 last:mr-0;
+  }
+  
+  .project-card {
+    @apply bg-white border border-gray-200 hover:border-gray-400 transition-all duration-300 cursor-pointer;
+  }
+  
+  .exhibition-item {
+    @apply border-b border-gray-200 py-4 last:border-b-0;
+  }
+}
