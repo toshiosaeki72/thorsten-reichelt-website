@@ -1,6 +1,13 @@
 import type { Project } from './projects'
 import { drawingsMeta } from './zeichnungen.meta'
 
+// TypeScript declaration for import.meta.glob
+declare global {
+  interface ImportMeta {
+    glob(pattern: string, options?: { eager?: boolean; as?: string }): Record<string, string>
+  }
+}
+
 const modules = import.meta.glob('../assets/zeichnungen/*.{jpg,jpeg,png}', {
   eager: true,
   as: 'url',

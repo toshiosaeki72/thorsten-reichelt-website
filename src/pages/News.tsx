@@ -1,4 +1,4 @@
-import { exhibitions } from '../data/exhibitions'
+
 
 const News = () => {
   return (

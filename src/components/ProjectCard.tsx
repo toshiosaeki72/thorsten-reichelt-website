@@ -17,9 +17,6 @@ const positionClass = (pos?: 'top' | 'center' | 'bottom') => {
 }
 
 const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
-  const subtitle = [project.technique, project.dimensions]
-    .filter(Boolean)
-    .join(', ')
   const fallbackSubtitle = project.description || ''
 
   // thumbOffset: z.B. '20%' für object-position: 50% 20%

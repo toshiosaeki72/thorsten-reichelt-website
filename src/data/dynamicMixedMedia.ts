@@ -1,6 +1,13 @@
 import type { Project } from './projects'
 import { mixedMediaMeta } from './mixed-media.meta'
 
+// TypeScript declaration for import.meta.glob
+declare global {
+  interface ImportMeta {
+    glob(pattern: string, options?: { eager?: boolean; as?: string }): Record<string, string>
+  }
+}
+
 const modules = import.meta.glob('../assets/mixed-media/*.{jpg,jpeg,png}', {
   eager: true,
   as: 'url',
