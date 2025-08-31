@@ -1,33 +1,18 @@
 import { useState, useEffect } from 'react'
-import { exhibitions } from '../data/exhibitions'
 import { artist } from '../data/artist'
 
 interface SidebarProps {
   currentPage: string
-  selectedYear: number | null
-  onYearSelect: (year: number | null) => void
 }
 
-const Sidebar = ({ currentPage, selectedYear, onYearSelect }: SidebarProps) => {
-  const [exhibitionsOpen, setExhibitionsOpen] = useState(false)
+const Sidebar = ({ currentPage }: SidebarProps) => {
   const [worksOpen, setWorksOpen] = useState(false)
   const [currentCategory, setCurrentCategory] = useState<string | null>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const years = [...new Set(exhibitions.map(ex => ex.year))].sort((a, b) => b - a)
-
   const navigateTo = (page: string) => {
     window.location.hash = page
     setMobileMenuOpen(false) // Schließe Mobile-Menü nach Navigation
-  }
-
-  const handleYearClick = (year: number) => {
-    if (selectedYear === year) {
-      onYearSelect(null)
-    } else {
-      onYearSelect(year)
-    }
-    navigateTo('exhibitions')
   }
 
   const workCategories = artist.categories.filter(c => c !== 'Alle')
