@@ -259,32 +259,13 @@ const Sidebar = ({ currentPage, selectedYear, onYearSelect }: SidebarProps) => {
           {/* Ausstellungen */}
           <div>
             <button
-              onClick={() => setExhibitionsOpen(!exhibitionsOpen)}
-              className={`nav-link block w-full text-left flex items-center justify-between ${
+              onClick={() => navigateTo('exhibitions')}
+              className={`nav-link block w-full text-left ${
                 currentPage === 'exhibitions' ? 'font-semibold underline' : ''
               }`}
             >
-              <span onClick={() => navigateTo('exhibitions')}>Ausstellungen</span>
-              <span className="text-xs">
-                {exhibitionsOpen ? '−' : '+'}
-              </span>
+              Ausstellungen
             </button>
-
-            {exhibitionsOpen && (
-              <div className="mt-3 ml-4 space-y-2">
-                {years.map(year => (
-                  <button
-                    key={year}
-                    onClick={() => handleYearClick(year)}
-                    className={`font-serif text-sm font-medium uppercase tracking-wide transition-all duration-200 block w-full text-left ${
-                      selectedYear === year ? 'font-semibold underline' : ''
-                    }`}
-                  >
-                    {year}
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
 
           {/* Aktuell */}
