@@ -12,7 +12,6 @@ import Music from './pages/Music'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
-  const [selectedYear, setSelectedYear] = useState<number | null>(null)
 
   const getPageFromHash = () => {
     const raw = window.location.hash.slice(1) || 'home'
@@ -62,8 +61,6 @@ function App() {
     <div className="flex min-h-screen bg-white">
       <Sidebar 
         currentPage={currentPage} 
-        selectedYear={selectedYear}
-        onYearSelect={setSelectedYear}
       />
       <main className="flex-1 lg:ml-64 p-4 lg:p-8 pt-20 lg:pt-8">
         {renderPage()}
