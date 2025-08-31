@@ -27,8 +27,8 @@ export const artist: Artist = {
     website: "https://thorstenreichelt.de"
   },
   startImages: [
-    "/images/start-1.jpg",
-    "/images/start-2.jpg", 
-    "/images/start-3.jpg"
+    "./images/start-1.jpg",
+    "./images/start-2.jpg", 
+    "./images/start-3.jpg"
   ]
 };
