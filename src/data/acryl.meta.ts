@@ -67,7 +67,7 @@ export const acrylicMeta: Record<string, AcrylicMetaItem> = {
     sortOrder: 8 
   },
   '09_blue strip': { 
-    title: 'dark blue',
+    title: 'blue strip',
     technique: 'Acryl auf Karton',
     dimensions: '15 x 15 cm',
     year: 2024,
