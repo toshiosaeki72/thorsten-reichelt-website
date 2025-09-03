@@ -43,6 +43,4 @@ jobs:
           
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
-        environment:
-          name: github-pages
+        uses: actions/deploy-pages@v4
