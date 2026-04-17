@@ -15,10 +15,10 @@ const News = () => {
           </h2>
           <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
             <h3 className="font-serif text-lg font-semibold uppercase tracking-wide mb-2">
-              Offene Ateliers Köln
+              Ausstellung zur Mülheimer Nacht
             </h3>
             <p className="font-sans text-sm text-gray-600">
-              12.09.-14.09.2025
+              25.04.2026
             </p>
           </div>
         </div>
